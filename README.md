@@ -1,5 +1,5 @@
 # material-components-mithril
-Mithril(v1) components library with material-components-web.
+Mithril(v1) components library with [material-components-web](https://github.com/material-components/material-components-web).
 ## Example
 ```
 var m = require("mithril");
