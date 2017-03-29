@@ -3,9 +3,9 @@ Mithril(v1) components library with [material-components-web](https://github.com
 ## Example
 ```
 var m = require("mithril");
-var mdl = require("material-components-mithril");
+var mdc = require("material-components-mithril");
 
-m(mdl.button, "Submit");
+m(mdc.button, "Submit");
 
 // -> Material button with the text "Submit".
 ```

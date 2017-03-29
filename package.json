@@ -1,0 +1,42 @@
+{
+  "name": "material-components-mithril",
+  "version": "1.0.0",
+  "description": "Mithril components library compatible with material-compornents-web.",
+  "main": "dist/bundle.js",
+  "scripts": {
+    "prepublish": "webpack",
+    "test": "cd docs && webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/h-ikeda/material-components-mithril.git"
+  },
+  "keywords": [
+    "mithril",
+    "material",
+    "design"
+  ],
+  "author": "Hiroki IKEDA",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/h-ikeda/material-components-mithril/issues"
+  },
+  "homepage": "https://github.com/h-ikeda/material-components-mithril#readme",
+  "peerDependencies": {
+    "mithril": "^1.1.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.1",
+    "babel-preset-babili": "0.0.12",
+    "babel-preset-env": "^1.2.2",
+    "css-loader": "^0.27.3",
+    "html-webpack-plugin": "^2.28.0",
+    "material-components-web": "^0.7.0",
+    "mithril": "^1.1.0",
+    "node-sass": "^4.5.1",
+    "sass-loader": "^6.0.3",
+    "style-loader": "^0.16.1",
+    "webpack": "^2.3.2"
+  }
+}
