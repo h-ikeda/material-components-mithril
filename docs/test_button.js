@@ -1,10 +1,14 @@
 import m from "mithril";
+import {hFlex, code} from "./test__utils";
 import {button} from "../dist/bundle";
 
 export default {
     view: () => [
         m("h3", "Flat button"),
-        m(button, "Flat button"),
+        m(hFlex, [
+            m(button, "Flat button"),
+            m(code, "m(button, \"Flat button\")")
+        ]),
         m("h3", "Raised button"),
         m(button, {raised: true}, "Raised button"),
         m("h3", "Primary colored button"),
