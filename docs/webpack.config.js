@@ -1,20 +1,16 @@
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-
 module.exports = {
-    entry: "./test__index.js",
+    entry: "./test_import.js",
     output: {
-        filename: './test__bundle.js'
+        filename: "bundle_test.js",
+        path: __dirname
     },
-    plugins: [new HtmlWebpackPlugin({
-        title: "material-components-mithril | Examples"
-    })],
     module: {
         rules: [{
             test: /\.js$/,
             use: [{
                 loader: "babel-loader",
                 options: {
-                    presets: ["env", "babili"]
+                    presets: ["env"]
                 }
             }]
         }]
