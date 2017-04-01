@@ -2,7 +2,7 @@ module.exports = {
     entry: "./index.js",
     output: {
         filename: "bundle.js",
-        library: "materialComponentMithril",
+        library: "materialComponentsMithril",
         libraryTarget: "umd",
         path: __dirname + "/dist"
     },
@@ -12,9 +12,12 @@ module.exports = {
             use: [{
                 loader: "babel-loader",
                 options: {
-                    presets: ["env", "babili"]
+                    presets: ["env"]
                 }
             }]
         }]
-    }
+    },
+    plugins: [
+        new (require("babili-webpack-plugin"))()
+    ]
 };

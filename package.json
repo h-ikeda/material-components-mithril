@@ -1,13 +1,14 @@
 {
   "name": "material-components-mithril",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Mithril components library compatible with material-compornents-web.",
-  "main": "./dist/bundle.js",
-  "files": ["./dist"],
+  "main": "dist/bundle.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "prepublish": "webpack",
-    "doc": "cp dist/bundle.js docs/bundle.js",
-    "test": "cd docs && webpack"
+    "test": "cp dist/bundle.js docs/bundle.js && cd docs && webpack"
   },
   "repository": {
     "type": "git",
@@ -32,8 +33,8 @@
     "@material/ripple": "^0.4.0",
     "babel-core": "^6.24.0",
     "babel-loader": "^6.4.1",
-    "babel-preset-babili": "0.0.12",
     "babel-preset-env": "^1.3.2",
+    "babili-webpack-plugin": "0.0.11",
     "mithril": "^1.1.0",
     "webpack": "^2.3.2"
   }
