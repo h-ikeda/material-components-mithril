@@ -18,9 +18,15 @@ This library doesn't treat css at all, just define tags and add classes for MDC 
 
 
 Secondly, load material-components-mithril.
+(npm)
 ```
-<script>
+npm install material-components-mithril
 ```
+(CDN)
+```
+<script src=""></script>
+```
+
 Then, you can use components as below:
 
 (CommonJS)
