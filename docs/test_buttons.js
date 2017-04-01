@@ -1,4 +1,4 @@
-var button = materialComponentMithril.button;
+var button = materialComponentsMithril.button;
 
 m.mount(document.querySelector("#buttons"), {
     view: () => [
