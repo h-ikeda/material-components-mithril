@@ -8,8 +8,7 @@
   ],
   "scripts": {
     "prepublish": "webpack",
-    "doc": "cp dist/bundle.js docs/bundle.js",
-    "test": "cd docs && webpack"
+    "test": "cp dist/bundle.js docs/bundle.js && cd docs && webpack"
   },
   "repository": {
     "type": "git",
