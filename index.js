@@ -1,7 +1,6 @@
 import button from "./components/button";
 import toolbar from "./components/toolbar";
 import toolbarTitle from "./components/toolbar_title";
-import toolbarRow from "./components/toolbar_row";
 import toolbarSection from "./components/toolbar_section";
 import card from "./components/card";
 import cardActionButton from "./components/card_actionbutton";
@@ -13,7 +12,6 @@ export {
     button,
     toolbar,
     toolbarSection,
-    toolbarRow,
     toolbarTitle,
     card,
     cardActionButton,

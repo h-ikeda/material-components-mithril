@@ -160,7 +160,7 @@ var _Mathsqrt = Math.sqrt,
       };return n.d(r, 'a', r), r;
     }, n.o = function (d, r) {
       return Object.prototype.hasOwnProperty.call(d, r);
-    }, n.p = '', n(n.s = 16);
+    }, n.p = '', n(n.s = 15);
   }([function (t, n, a) {
     'use strict';
     function r(f, _) {
@@ -191,7 +191,7 @@ var _Mathsqrt = Math.sqrt,
         l = function (f) {
       return f && f.__esModule ? f : { default: f };
     }(r),
-        u = a(21);n.default = { oncreate: function oncreate(_) {
+        u = a(20);n.default = { oncreate: function oncreate(_) {
         u.MDCRipple.attachTo(_.dom);
       }, view: function view(_) {
         return (0, l.default)(_, 'button', { mdcButton: 'mdc-button', mdcButtonAccent: 'mdc-button--accent', mdcButtonPrimary: 'mdc-button--primary', mdcButtonRaised: 'mdc-button--raised', mdcButtonDense: 'mdc-button--dense', mdcButtonCompact: 'mdc-button--compact', mdcButtonThemeDark: 'mdc-button--theme-dark' }, function (h) {
@@ -230,7 +230,7 @@ var _Mathsqrt = Math.sqrt,
       return u && u.__esModule ? u : { default: u };
     }Object.defineProperty(n, '__esModule', { value: !0 });var r = a(2);Object.defineProperty(n, 'MDCFoundation', { enumerable: !0, get: function get() {
         return d(r).default;
-      } });var l = a(18);Object.defineProperty(n, 'MDCComponent', { enumerable: !0, get: function get() {
+      } });var l = a(17);Object.defineProperty(n, 'MDCComponent', { enumerable: !0, get: function get() {
         return d(l).default;
       } });
   }, function (t, n) {
@@ -827,7 +827,7 @@ var _Mathsqrt = Math.sqrt,
           };
         };var z = O(window);S.render = z.render, S.redraw = R.redraw, S.request = I.request, S.jsonp = I.jsonp, S.parseQueryString = U, S.buildQueryString = w, S.version = '1.1.0', S.vnode = u, t.exports = S;
       })();
-    }).call(n, a(24).setImmediate, a(6));
+    }).call(n, a(23).setImmediate, a(6));
   }, function (t) {
     'use strict';
     var d = 'function' == typeof Symbol && 'symbol' == _typeof(Symbol.iterator) ? function (l) {
@@ -908,14 +908,6 @@ var _Mathsqrt = Math.sqrt,
         l = function (u) {
       return u && u.__esModule ? u : { default: u };
     }(r);n.default = { view: function view(f) {
-        return (0, l.default)(f, '', { mdcToolbarRow: 'mdc-toolbar__row' });
-      } };
-  }, function (t, n, a) {
-    'use strict';
-    Object.defineProperty(n, '__esModule', { value: !0 });var r = a(0),
-        l = function (u) {
-      return u && u.__esModule ? u : { default: u };
-    }(r);n.default = { view: function view(f) {
         return (0, l.default)(f, 'section', { mdcToolbarSection: 'mdc-toolbar__section', mdcToolbarSectionAlignStart: 'mdc-toolbar__section--align-start', mdcToolbarSectionAlignEnd: 'mdc-toolbar__section--align-end' }, function (_) {
           return 'mdcToolbarSection' === _ || f.attrs[_];
         });
@@ -930,28 +922,26 @@ var _Mathsqrt = Math.sqrt,
       } };
   }, function (t, n, a) {
     'use strict';
-    function d(F) {
-      return F && F.__esModule ? F : { default: F };
-    }Object.defineProperty(n, '__esModule', { value: !0 }), n.cardSubtitle = n.cardTitle = n.cardBlock = n.cardActionButton = n.card = n.toolbarTitle = n.toolbarRow = n.toolbarSection = n.toolbar = n.button = void 0;var r = a(1),
+    function d(R) {
+      return R && R.__esModule ? R : { default: R };
+    }Object.defineProperty(n, '__esModule', { value: !0 }), n.cardSubtitle = n.cardTitle = n.cardBlock = n.cardActionButton = n.card = n.toolbarTitle = n.toolbarSection = n.toolbar = n.button = void 0;var r = a(1),
         l = d(r),
         u = a(12),
         f = d(u),
-        _ = a(15),
+        _ = a(14),
         h = d(_),
         b = a(13),
         C = d(b),
-        A = a(14),
+        A = a(7),
         T = d(A),
-        S = a(7),
+        S = a(8),
         E = d(S),
-        w = a(8),
+        w = a(9),
         N = d(w),
-        D = a(9),
+        D = a(11),
         I = d(D),
-        O = a(11),
-        P = d(O),
-        R = a(10),
-        M = d(R);n.button = l.default, n.toolbar = f.default, n.toolbarSection = T.default, n.toolbarRow = C.default, n.toolbarTitle = h.default, n.card = E.default, n.cardActionButton = N.default, n.cardBlock = I.default, n.cardTitle = P.default, n.cardSubtitle = M.default;
+        O = a(10),
+        P = d(O);n.button = l.default, n.toolbar = f.default, n.toolbarSection = C.default, n.toolbarTitle = h.default, n.card = T.default, n.cardActionButton = E.default, n.cardBlock = N.default, n.cardTitle = I.default, n.cardSubtitle = P.default;
   }, function (t, n) {
     'use strict';
     function d(C) {
@@ -1031,8 +1021,8 @@ var _Mathsqrt = Math.sqrt,
       };
     }(),
         f = a(3),
-        _ = a(17),
-        h = a(19),
+        _ = a(16),
+        h = a(18),
         b = a(4),
         C = { mouseup: 'mousedown', pointerup: 'pointerdown', touchend: 'touchstart', keyup: 'keydown', blur: 'focus' },
         A = function (T) {
@@ -1207,7 +1197,7 @@ var _Mathsqrt = Math.sqrt,
       };
     }(),
         _ = a(3),
-        h = a(20),
+        h = a(19),
         b = function (S) {
       return S && S.__esModule ? S : { default: S };
     }(h),
@@ -1402,7 +1392,7 @@ var _Mathsqrt = Math.sqrt,
               R = Object.getPrototypeOf && Object.getPrototypeOf(l);R = R && R.setTimeout ? R : l, '[object process]' === {}.toString.call(l.process) ? C() : A() ? T() : l.MessageChannel ? S() : O && 'onreadystatechange' in O.createElement('script') ? E() : w(), R.setImmediate = f, R.clearImmediate = _;
         }
       })('undefined' == typeof self ? 'undefined' == typeof d ? void 0 : d : self);
-    }).call(n, a(6), a(22));
+    }).call(n, a(6), a(21));
   }, function (t, n, a) {
     'use strict';
     function d(l, u) {
@@ -1423,7 +1413,7 @@ var _Mathsqrt = Math.sqrt,
       clearTimeout(l._idleTimeoutId);var u = l._idleTimeout;0 <= u && (l._idleTimeoutId = setTimeout(function () {
         l._onTimeout && l._onTimeout();
       }, u));
-    }, a(23), n.setImmediate = setImmediate, n.clearImmediate = clearImmediate;
+    }, a(22), n.setImmediate = setImmediate, n.clearImmediate = clearImmediate;
   }]);
 });
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0).setImmediate, __webpack_require__(0).clearImmediate, __webpack_require__(6)(module)))

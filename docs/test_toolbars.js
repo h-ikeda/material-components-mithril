@@ -8,14 +8,21 @@ var toolbarTitle = materialComponentsMithril.toolbarTitle;
 
 m.mount(document.querySelector("#toolbars"), {
     view: () => [
-        m(toolbar,
-            m(toolbarRow, [
-                m(toolbarSection,
-                    m(toolbarTitle, "Title")
-                ),
-                m(toolbarSection, {mdcToolbarSectionAlignEnd: true}, "Align end")
-            ])
-        ),
-        m(code, 'm(button, "Flat")')
+        m(toolbar, [
+            m(toolbarSection, {mdcToolbarSectionAlignStart: true}, 
+                m(toolbarTitle, "Title (Align start)")
+            ),
+            m(toolbarSection, "Align center"),
+            m(toolbarSection, {mdcToolbarSectionAlignEnd: true}, "Align end")
+        ]),
+        m(code,
+`m(toolbar, [
+    m(toolbarSection, {mdcToolbarSectionAlignStart: true}, 
+        m(toolbarTitle, "Title (Align start)")
+    ),
+    m(toolbarSection, "Align center"),
+    m(toolbarSection, {mdcToolbarSectionAlignEnd: true}, "Align end")
+])`
+        )
     ]
 });
