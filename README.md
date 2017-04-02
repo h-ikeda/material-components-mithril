@@ -16,6 +16,7 @@ import "material-components-web/dist/material-components-web.css";
 to css in js with tools like webpack css-loader + style-loader.
 
 See more information about using material-components-web at [the official document](https://github.com/material-components/material-components-web/blob/master/docs/getting-started.md).
+
 ---
 Secondly, load material-components-mithril.
 
@@ -27,6 +28,7 @@ npm install material-components-mithril
 ```
 <script src="https://unpkg.com/material-components-mithril/"></script>
 ```
+
 ---
 Then, you can use components as below:
 
