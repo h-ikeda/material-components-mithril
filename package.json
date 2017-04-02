@@ -1,6 +1,6 @@
 {
   "name": "material-components-mithril",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "Mithril components library compatible with material-compornents-web.",
   "main": "dist/bundle.js",
   "files": [

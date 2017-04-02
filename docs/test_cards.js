@@ -14,7 +14,7 @@ m.mount(document.querySelector("#cards"), {
                 m(cardTitle, "Title"),
                 m(cardSubtitle, "Subtitle")
             ]),
-            m(cardBlock, {type: "mdcCardMedia", style: {backgroundColor: "green", height: "90px"}}, "Media"),
+            m(cardBlock, {type: "mdcCardMedia", style: {backgroundColor: "lightgreen", height: "90px"}}, "Media"),
             m(cardBlock, {type: "mdcCardSupportingText"},
                 "Supporting text"
             ),
@@ -29,7 +29,7 @@ m.mount(document.querySelector("#cards"), {
         m(cardTitle, "Title"),
         m(cardSubtitle, "Subtitle")
     ]),
-    m(cardBlock, {type: "mdcCardMedia", style: {backgroundColor: "green", height: "90px"}}, "Media"),
+    m(cardBlock, {type: "mdcCardMedia", style: {backgroundColor: "lightgreen", height: "90px"}}, "Media"),
     m(cardBlock, {type: "mdcCardSupportingText"},
         "Supporting text"
     ),
@@ -40,7 +40,7 @@ m.mount(document.querySelector("#cards"), {
 ])`
         ),
         m(card, [
-            m(cardBlock, {type: "mdcCardMedia", style: {backgroundColor: "green", height: "90px"}}, "Media"),
+            m(cardBlock, {type: "mdcCardMedia", style: {backgroundColor: "lightgreen", height: "90px"}}, "Media"),
             m(cardBlock, {type: "mdcCardPrimary"}, [
                 m(cardTitle, {mdcCardTitleLarge: true}, "Large title"),
                 m(cardSubtitle, "Subtitle")
@@ -52,7 +52,7 @@ m.mount(document.querySelector("#cards"), {
         ]),
         m(code,
 `m(card, [
-    m(cardBlock, {type: "mdcCardMedia", style: {backgroundColor: "green", height: "90px"}}, "Media"),
+    m(cardBlock, {type: "mdcCardMedia", style: {backgroundColor: "lightgreen", height: "90px"}}, "Media"),
     m(cardBlock, {type: "mdcCardPrimary"}, [
         m(cardTitle, {mdcCardTitleLarge: true}, "Large title"),
         m(cardSubtitle, "Subtitle")
@@ -63,8 +63,8 @@ m.mount(document.querySelector("#cards"), {
     ])
 ])`
         ),
-        m(card, {mdcCardThemeDark: true, style: {backgroundColor: "gray"}}, [
-            m(cardBlock, {type: "mdcCardMedia", style: {backgroundColor: "black", height: "90px"}},
+        m(card, {mdcCardThemeDark: true, style: {backgroundColor: "dimgray"}}, [
+            m(cardBlock, {type: "mdcCardMedia", style: {backgroundColor: "green", height: "90px"}},
                 m(cardTitle, "Title in media block")
             ),
             m(cardBlock, {type: "mdcCardSupportingText"}, "Supporting text"),
@@ -74,8 +74,8 @@ m.mount(document.querySelector("#cards"), {
             ])
         ]),
         m(code,
-`m(card, {mdcCardThemeDark: true, style: {backgroundColor: "gray"}}, [
-    m(cardBlock, {type: "mdcCardMedia", style: {backgroundColor: "black", height: "90px"}},
+`m(card, {mdcCardThemeDark: true, style: {backgroundColor: "dimgray"}}, [
+    m(cardBlock, {type: "mdcCardMedia", style: {backgroundColor: "green", height: "90px"}},
         m(cardTitle, "Title in media block")
     ),
     m(cardBlock, {type: "mdcCardSupportingText"}, "Supporting text"),
