@@ -1,7 +1,9 @@
 # material-components-mithril
 Mithril(v1) components library with [material-components-web](https://github.com/material-components/material-components-web).  
 ## Usage
-First, you have to implement css from "material-components-web".
+This library doesn't treat css at all, just define tags and add classes for MDC components.
+
+So first, you have to implement css from "material-components-web".
 
 In your HTML,
 ```
@@ -11,10 +13,8 @@ or
 ```
 import "material-components-web/dist/material-components-web.css";
 ```
-to css in js with tools like webpack css-loader + style-loader.
+to css in js with tools like webpack css-loader + style-loader.  
 See more information about using material-components-web at [the official document](https://github.com/material-components/material-components-web/blob/master/docs/getting-started.md).  
-
-This library doesn't treat css at all, just define tags and add classes for MDC components.
 
 
 Secondly, load material-components-mithril.
@@ -24,7 +24,7 @@ npm install material-components-mithril
 ```
 (CDN)
 ```
-<script src=""></script>
+<script src="https://unpkg.com/material-components-mithril/"></script>
 ```
 
 Then, you can use components as below:
@@ -53,7 +53,6 @@ m.mount(document.body, {
 (Browser)
 ```
 <script src="https://unpkg.com/mithril/mithril.js"></script>
-<script src="https://unpkg.com/material-components-mithril/"></script>
 <script>
     var button = {
         view: function() {
