@@ -18,12 +18,13 @@ See more information about using material-components-web at [the official docume
 
 
 Secondly, load material-components-mithril.
-```
-<script src="https://unpkg.com/material-components-mithril/">
-```
-or
+(npm)
 ```
 npm install material-components-mithril
+```
+(CDN)
+```
+<script src="https://unpkg.com/material-components-mithril/"></script>
 ```
 
 Then, you can use components as below:
