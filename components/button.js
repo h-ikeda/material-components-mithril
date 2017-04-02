@@ -9,7 +9,8 @@ export default {
         mdcButtonPrimary: "mdc-button--primary",
         mdcButtonRaised: "mdc-button--raised",
         mdcButtonDense: "mdc-button--dense",
-        mdcButtonCompact: "mdc-button--compact"
+        mdcButtonCompact: "mdc-button--compact",
+        mdcButtonThemeDark: "mdc-button--theme-dark"
     }, cls =>
         (cls === "mdcButton") || vnode.attrs[cls]
     )

@@ -12,6 +12,8 @@ import cardSubtitle from "./components/card_subtitle";
 export {
     button,
     toolbar,
+    toolbarSection,
+    toolbarRow,
     toolbarTitle,
     card,
     cardActionButton,
