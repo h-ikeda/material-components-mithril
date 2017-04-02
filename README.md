@@ -13,7 +13,7 @@ or
 ```
 import "material-components-web/dist/material-components-web.css";
 ```
-to css in js with tools like webpack css-loader + style-loader.
+to inject style tags dynamically with tools like webpack css-loader + style-loader.
 
 See more information about using material-components-web at [the official document](https://github.com/material-components/material-components-web/blob/master/docs/getting-started.md).
 
