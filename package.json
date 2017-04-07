@@ -8,7 +8,7 @@
   ],
   "scripts": {
     "prepublish": "webpack",
-    "test": "mocha-phantomjs test/test.html"
+    "test": "npm i && mocha-phantomjs test/test.html ; rm -r test/temp"
   },
   "repository": {
     "type": "git",

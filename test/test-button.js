@@ -45,9 +45,5 @@ describe("component-button", () => {
         var output = "";
         m.render(parent1, m(button, {oncreate(){output+="created.";}}));
         assert.equal(output, "created.");
-        setTimeout(() => {
-            console.log(parent1.innerHTML);
-            done();
-        }, 1000);
     });
 });
