@@ -1,17 +1,10 @@
-import f from "./commons/vnode";
-import {MDCRipple} from "@material/ripple";
+import c from "./commons/component-with-default";
+import {MDCRipple} from "@material/ripple/dist/mdc.ripple";
 
-export default {
-    oncreate: vnode => {MDCRipple.attachTo(vnode.dom);},
-    view: vnode => f(vnode, "button", {
-        mdcButton: "mdc-button",
-        mdcButtonAccent: "mdc-button--accent",
-        mdcButtonPrimary: "mdc-button--primary",
-        mdcButtonRaised: "mdc-button--raised",
-        mdcButtonDense: "mdc-button--dense",
-        mdcButtonCompact: "mdc-button--compact",
-        mdcButtonThemeDark: "mdc-button--theme-dark"
-    }, cls =>
-        (cls === "mdcButton") || vnode.attrs[cls]
-    )
-};
+export default c({
+    tagName: "button",
+    class: "mdc-button",
+    oncreate(vnode) {
+        MDCRipple.attachTo(vnode.dom);
+    }
+});

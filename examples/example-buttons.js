@@ -1,16 +1,15 @@
-/*eslint-env browser */
-/*globals code m materialComponentsMithril*/
+import m from "mithril";
+import {button} from "../index";
+import {code} from "./example-utils";
 
-var button = materialComponentsMithril.button;
-
-m.mount(document.querySelector("#buttons"), {
+export default {
     view: () => [
         m(button, "Flat"),
         m(code, `m(button, "Flat")`),
         m(button, {disabled: true}, "Disabled"),
         m(code, `m(button, {disabled: true}, "Disabled")`),
-        m(button, {mdcButtonRaised: true}, "Raised"),
-        m(code, `m(button, {mdcButtonRaised: true}, "Raised")`),
+        m(button, {class: "mdc-button--raised"}, "Raised"),
+        m(code, `m(button, {class: "mdc-button--raised"}, "Raised")`),
         m(button, {disabled: true, mdcButtonRaised: true}, "Disabled and Raised"),
         m(code, `m(button, {disabled: true, mdcButtonRaised: true}, "Disabled and Raised")`),
         m(button, {mdcButtonDense: true}, "Dense"),
@@ -50,4 +49,4 @@ m.mount(document.querySelector("#buttons"), {
         m(button, {tagName: "a", href: "#"}, "Link"),
         m(code, `m(button, {tagName: "a", href: "#"}, "Link")`)
     ]
-});
+};

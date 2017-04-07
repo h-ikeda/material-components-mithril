@@ -16,5 +16,5 @@ export default (vnode, tagName, classNames, classFilter) =>
             .filter((v, i, s) => s.indexOf(v) === i)
             .map(c => (vnode.attrs.classNames ? vnode.attrs.classNames[c]: "") || classNames[c])
             .join(" ")
-    }), (k, s) => !(s.classNames ? (s.classNames[k] || classNames[k]): classNames[k]) && k !== "tagName"),
+    }), (k, s) => !(s.classNames ? s.classNames[k] || classNames[k]: classNames[k]) && k !== "tagName"),
     k => k !== "classNames"), vnode.children);

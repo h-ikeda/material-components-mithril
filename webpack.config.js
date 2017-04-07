@@ -1,12 +1,16 @@
 /*eslint-env node */
 
 module.exports = {
-    entry: "./index.js",
+    entry: {
+        dist: "./index.js",
+        "test/temp": "./test/index.js",
+        "docs/script": "./examples/index.js"
+    },
     output: {
-        filename: "bundle.js",
+        filename: "[name]/bundle.js",
         library: "materialComponentsMithril",
         libraryTarget: "umd",
-        path: __dirname + "/dist"
+        path: __dirname
     },
     module: {
         rules: [{
