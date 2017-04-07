@@ -1,5 +1,7 @@
 # material-components-mithril
-Mithril(v1) components library with [material-components-web](https://github.com/material-components/material-components-web).  
+Mithril(v1) components library with [material-components-web](https://github.com/material-components/material-components-web).
+
+[![CircleCI](https://circleci.com/gh/h-ikeda/material-components-mithril.svg?style=svg)](https://circleci.com/gh/h-ikeda/material-components-mithril) / [![Codacy Badge](https://api.codacy.com/project/badge/Grade/424c4d2355fa409dba209b63c1102c38)](https://www.codacy.com/app/h-ikeda/material-components-mithril?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=h-ikeda/material-components-mithril&amp;utm_campaign=Badge_Grade)
 ## Usage
 This library doesn't treat css at all, just define tags and add classes for MDC components.
 
