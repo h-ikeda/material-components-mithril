@@ -1,52 +1,112 @@
 import m from "mithril";
 import {button} from "../index";
-import {code} from "./example-utils";
 
 export default {
-    view: () => [
-        m(button, "Flat"),
-        m(code, `m(button, "Flat")`),
-        m(button, {disabled: true}, "Disabled"),
-        m(code, `m(button, {disabled: true}, "Disabled")`),
-        m(button, {class: "mdc-button--raised"}, "Raised"),
-        m(code, `m(button, {class: "mdc-button--raised"}, "Raised")`),
-        m(button, {disabled: true, class: "mdc-button--raised"}, "Disabled and Raised"),
-        m(code, `m(button, {disabled: true, class: "mdc-button--raised"}, "Disabled and Raised")`),
-        m(button, {class: "mdc-button--dense"}, "Dense"),
-        m(code, `m(button, {class: "mdc-button--dense"}, "Dense")`),
-        m(button, {class: "mdc-button--dense", disabled: true}, "Dense and Disabled"),
-        m(code, `m(button, {class: "mdc-button--dense", disabled: true}, "Dense and Disabled")`),
-        m(button, {class: "mdc-button--dense mdc-button--raised"}, "Dense and Raised"),
-        m(code, `m(button, {class: "mdc-button--dense mdc-button--raised"}, "Dense and Raised")`),
-        m(button, {class: "mdc-button--dense mdc-button--raised", disabled: true}, "Dense, Disabled and Raised"),
-        m(code, `m(button, {class: "mdc-button--dense mdc-button--raised", disabled: true}, "Dense, Disabled and Raised")`),
-        m(button, {class: "mdc-button--compact"}, "Compact"),
-        m(code, `m(button, {class: "mdc-button--compact"}, "Compact")`),
-        m(button, {class: "mdc-button--compact", disabled: true}, "Compact and Disabled"),
-        m(code, `m(button, {class: "mdc-button--compact", disabled: true}, "Compact and Disabled")`),
-        m(button, {class: "mdc-button--compact mdc-button--raised"}, "Compact and Raised"),
-        m(code, `m(button, {class: "mdc-button--compact mdc-button--raised"}, "Compact and Raised")`),
-        m(button, {class: "mdc-button--compact mdc-button--raised", disabled: true}, "Compact, Disabled and Raised"),
-        m(code, `m(button, {class: "mdc-button--compact mdc-button--raised", disabled: true}, "Compact, Disabled and Raised")`),
-        m(button, {class: "mdc-button--primary"}, "Primary colored"),
-        m(code, `m(button, {class: "mdc-button--primary"}, "Primary colored")`),
-        m(button, {class: "mdc-button--primary", disabled: true}, "Primary colored and Disabled"),
-        m(code, `m(button, {class: "mdc-button--primary", disabled: true}, "Primary colored and Disabled")`),
-        m(button, {class: "mdc-button--primary mdc-button--raised"}, "Primary colored and Raised"),
-        m(code, `m(button, {class: "mdc-button--primary mdc-button--raised"}, "Primary colored and Raised")`),
-        m(button, {class: "mdc-button--primary mdc-button--raised", disabled: true}, "Primary colored, Disabled and Raised"),
-        m(code, `m(button, {class: "mdc-button--primary mdc-button--raised", disabled: true}, "Primary colored, Disabled and Raised")`),
-        m(button, {class: "mdc-button--accent"}, "Accent colored"),
-        m(code, `m(button, {class: "mdc-button--accent"}, "Accent colored")`),
-        m(button, {class: "mdc-button--accent", disabled: true}, "Accent colored and Disabled"),
-        m(code, `m(button, {class: "mdc-button--accent", disabled: true}, "Accent colored and Disabled")`),
-        m(button, {class: "mdc-button--accent mdc-button--raised"}, "Accent colored and Raised"),
-        m(code, `m(button, {class: "mdc-button--accent mdc-button--raised"}, "Accent colored and Raised")`),
-        m(button, {class: "mdc-button--accent mdc-button--raised", disabled: true}, "Accent colored, Disabled and Raised"),
-        m(code, `m(button, {class: "mdc-button--accent mdc-button--raised", disabled: true}, "Accent colored, Disabled and Raised")`),
-        m(button, {tagName: "div"}, "Div"),
-        m(code, `m(button, {tagName: "div"}, "Div")`),
-        m(button, {tagName: "a", href: "#"}, "Link"),
-        m(code, `m(button, {tagName: "a", href: "#"}, "Link")`)
-    ]
+    view() {
+        return m("main", [
+            m("h1", "MDC WEB BUTTON with material-components-mithril"),
+            m("section", [
+                m("fieldset", [
+                    m("legend", "Buttons"),
+                    m(button, "Default"),
+                    m(button, {raised: true}, "Raised"),
+                    m(button, {dense: true}, "Dense Default"),
+                    m(button, {dense: true, raised: true}, "Dense Raised"),
+                    m(button, {compact: true}, "Compact"),
+                    m(button, {compact: true, raised: true}, "Compact Raised"),
+                    m(button, {color: "primary"}, "Default with Primary"),
+                    m(button, {color: "primary", raised: true}, "Raised with Primary"),
+                    m(button, {color: "accent"}, "Default with Accent"),
+                    m(button, {color: "accent", raised: true}, "Raised with Accent"),
+                    m(button, {tagName: "div", raised: true}, "Div")
+                ]),
+                m("fieldset", [
+                    m("legend", "Buttons without Ripples"),
+                    m(button, {ripple: false}, "Default"),
+                    m(button, {raised: true, ripple: false}, "Raised"),
+                    m(button, {dense: true, ripple: false}, "Dense Default"),
+                    m(button, {dense: true, raised: true, ripple: false}, "Dense Raised"),
+                    m(button, {compact: true, ripple: false}, "Compact"),
+                    m(button, {compact: true, raised: true, ripple: false}, "Compact Raised"),
+                    m(button, {color: "primary", ripple: false}, "Default with Primary"),
+                    m(button, {color: "primary", raised: true, ripple: false}, "Raised with Primary"),
+                    m(button, {color: "accent", ripple: false}, "Default with Accent"),
+                    m(button, {color: "accent", raised: true, ripple: false}, "Raised with Accent"),
+                    m(button, {tagName: "div", raised: true, ripple: false}, "Div")
+                ]),
+                m("fieldset", [
+                    m("legend", "Links with Button Style"),
+                    m(button, {tagName: "a", href: "Button", oncreate: m.route.link}, "Default"),
+                    m(button, {tagName: "a", href: "Button", oncreate: m.route.link, raised: true}, "Raised"),
+                    m(button, {tagName: "a", href: "Button", oncreate: m.route.link, dense: true}, "Dense Default"),
+                    m(button, {tagName: "a", href: "Button", oncreate: m.route.link, dense: true, raised: true}, "Dense Raised"),
+                    m(button, {tagName: "a", href: "Button", oncreate: m.route.link, compact: true}, "Compact"),
+                    m(button, {tagName: "a", href: "Button", oncreate: m.route.link, compact: true, raised: true}, "Compact Raised"),
+                    m(button, {tagName: "a", href: "Button", oncreate: m.route.link, color: "primary"}, "Default with Primary"),
+                    m(button, {tagName: "a", href: "Button", oncreate: m.route.link, color: "primary", raised: true}, "Raised with Primary"),
+                    m(button, {tagName: "a", href: "Button", oncreate: m.route.link, color: "accent"}, "Default with Accent"),
+                    m(button, {tagName: "a", href: "Button", oncreate: m.route.link, color: "accent", raised: true}, "Raised with Accent")
+                ]),
+                m("fieldset", [
+                    m("legend", "Disabled Buttons"),
+                    m(button, {disabled: true}, "Default"),
+                    m(button, {disabled: true, raised: true}, "Raised"),
+                    m(button, {disabled: true, dense: true}, "Dense Default"),
+                    m(button, {disabled: true, dense: true, raised: true}, "Dense Raised"),
+                    m(button, {disabled: true, compact: true}, "Compact"),
+                    m(button, {disabled: true, compact: true, raised: true}, "Compact Raised"),
+                    m(button, {disabled: true, color: "primary"}, "Default with Primary"),
+                    m(button, {disabled: true, color: "primary", raised: true}, "Raised with Primary"),
+                    m(button, {disabled: true, color: "accent"}, "Default with Accent"),
+                    m(button, {disabled: true, color: "accent", raised: true}, "Raised with Accent"),
+                    m(button, {disabled: true, tagName: "div", raised: true}, "Div")
+                ])
+            ]),
+            m("h2", "Dark theme"),
+            m("section.mdc-theme--dark", [
+                m("fieldset", [
+                    m("legend", "Buttons"),
+                    m(button, "Default"),
+                    m(button, {raised: true}, "Raised"),
+                    m(button, {dense: true}, "Dense Default"),
+                    m(button, {dense: true, raised: true}, "Dense Raised"),
+                    m(button, {compact: true}, "Compact"),
+                    m(button, {compact: true, raised: true}, "Compact Raised"),
+                    m(button, {color: "primary"}, "Default with Primary"),
+                    m(button, {color: "primary", raised: true}, "Raised with Primary"),
+                    m(button, {color: "accent"}, "Default with Accent"),
+                    m(button, {color: "accent", raised: true}, "Raised with Accent"),
+                    m(button, {tagName: "div", raised: true}, "Div")
+                ]),
+                m("fieldset", [
+                    m("legend", "Buttons without Ripples"),
+                    m(button, {ripple: false}, "Default"),
+                    m(button, {raised: true, ripple: false}, "Raised"),
+                    m(button, {dense: true, ripple: false}, "Dense Default"),
+                    m(button, {dense: true, raised: true, ripple: false}, "Dense Raised"),
+                    m(button, {compact: true, ripple: false}, "Compact"),
+                    m(button, {compact: true, raised: true, ripple: false}, "Compact Raised"),
+                    m(button, {color: "primary", ripple: false}, "Default with Primary"),
+                    m(button, {color: "primary", raised: true, ripple: false}, "Raised with Primary"),
+                    m(button, {color: "accent", ripple: false}, "Default with Accent"),
+                    m(button, {color: "accent", raised: true, ripple: false}, "Raised with Accent"),
+                    m(button, {tagName: "div", raised: true, ripple: false}, "Div")
+                ]),
+                m("fieldset", [
+                    m("legend", "Disabled Buttons"),
+                    m(button, {disabled: true}, "Default"),
+                    m(button, {disabled: true, raised: true}, "Raised"),
+                    m(button, {disabled: true, dense: true}, "Dense Default"),
+                    m(button, {disabled: true, dense: true, raised: true}, "Dense Raised"),
+                    m(button, {disabled: true, compact: true}, "Compact"),
+                    m(button, {disabled: true, compact: true, raised: true}, "Compact Raised"),
+                    m(button, {disabled: true, color: "primary"}, "Default with Primary"),
+                    m(button, {disabled: true, color: "primary", raised: true}, "Raised with Primary"),
+                    m(button, {disabled: true, color: "accent"}, "Default with Accent"),
+                    m(button, {disabled: true, color: "accent", raised: true}, "Raised with Accent"),
+                    m(button, {disabled: true, tagName: "div", raised: true}, "Div")
+                ])
+            ])
+        ]);
+    }
 };

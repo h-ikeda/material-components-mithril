@@ -1,5 +1,7 @@
 /*eslint-env node */
 
+var babiliWebpackPlugin = require("babili-webpack-plugin");
+
 module.exports = {
     entry: {
         dist: "./index.js",
@@ -24,6 +26,6 @@ module.exports = {
         }]
     },
     plugins: [
-        new (require("babili-webpack-plugin"))()
+        new babiliWebpackPlugin()
     ]
 };

@@ -5,13 +5,21 @@ import m from "mithril";
 import button from "../components/button";
 
 function eventFire(el, etype){
-  if (el.fireEvent) {
-    el.fireEvent("on" + etype);
-  } else {
-    var evObj = document.createEvent("Events");
-    evObj.initEvent(etype, true, false);
-    el.dispatchEvent(evObj);
-  }
+    if (el.fireEvent) {
+        el.fireEvent("on" + etype);
+    } else {
+        var evObj = document.createEvent("Events");
+        evObj.initEvent(etype, true, false);
+        el.dispatchEvent(evObj);
+    }
+}
+
+function sorted(html) {
+    return html.replace(/class="(.*)"/g, (_, p) => {
+        var t = p.split(" ").filter(c => c);
+        t.sort();
+        return t.join(" ");
+    });
 }
 
 describe("component-button", () => {
@@ -33,7 +41,7 @@ describe("component-button", () => {
         var actual = parent1.innerHTML;
         m.render(parent2, m({view(){return m("a.test.mdc-button", "Link Button");}}));
         var expected = parent2.innerHTML;
-        assert.equal(actual, expected);
+        assert.equal(sorted(actual), sorted(expected));
     });
     it("should trigger events when event methods are supplied.", () => {
         var output = "";

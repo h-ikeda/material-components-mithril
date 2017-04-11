@@ -1,117 +1,129 @@
-/*eslint-env browser */
-/*globals code m materialComponentsMithril*/
+import m from "mithril";
+import {card, cardBlock, cardTitle, cardSubtitle, cardAction, cardMediaItem} from "../index";
 
-var card = materialComponentsMithril.card;
-var cardBlock = materialComponentsMithril.cardBlock;
-var cardTitle = materialComponentsMithril.cardTitle;
-var cardSubtitle = materialComponentsMithril.cardSubtitle;
-var cardActionButton = materialComponentsMithril.cardActionButton;
-
-m.mount(document.querySelector("#cards"), {
-    view: () => [
-        m(card, [
-            m(cardBlock, {type: "mdcCardPrimary"}, [
-                m(cardTitle, "Title"),
-                m(cardSubtitle, "Subtitle")
-            ]),
-            m(cardBlock, {type: "mdcCardMedia", style: {backgroundColor: "lightgreen", height: "90px"}}, "Media"),
-            m(cardBlock, {type: "mdcCardSupportingText"},
-                "Supporting text"
-            ),
-            m(cardBlock, {type: "mdcCardActions"}, [
-                m(cardActionButton, "Action 1"),
-                m(cardActionButton, "Action 2")
-            ])
-        ]),
-        m(code,
-`m(card, [
-    m(cardBlock, {type: "mdcCardPrimary"}, [
-        m(cardTitle, "Title"),
-        m(cardSubtitle, "Subtitle")
-    ]),
-    m(cardBlock, {type: "mdcCardMedia", style: {backgroundColor: "lightgreen", height: "90px"}}, "Media"),
-    m(cardBlock, {type: "mdcCardSupportingText"},
-        "Supporting text"
-    ),
-    m(cardBlock, {type: "mdcCardActions"}, [
-        m(cardActionButton, "Action 1"),
-        m(cardActionButton, "Action 2")
-    ])
-])`
-        ),
-        m(card, [
-            m(cardBlock, {type: "mdcCardMedia", style: {backgroundColor: "lightgreen", height: "90px"}}, "Media"),
-            m(cardBlock, {type: "mdcCardPrimary"}, [
-                m(cardTitle, {mdcCardTitleLarge: true}, "Large title"),
-                m(cardSubtitle, "Subtitle")
-            ]),
-            m(cardBlock, {type: "mdcCardActions", mdcCardActionsVertical: true}, [
-                m(cardActionButton, "Vertical Action 1"),
-                m(cardActionButton, "Vertical Action 2")
-            ])
-        ]),
-        m(code,
-`m(card, [
-    m(cardBlock, {type: "mdcCardMedia", style: {backgroundColor: "lightgreen", height: "90px"}}, "Media"),
-    m(cardBlock, {type: "mdcCardPrimary"}, [
-        m(cardTitle, {mdcCardTitleLarge: true}, "Large title"),
-        m(cardSubtitle, "Subtitle")
-    ]),
-    m(cardBlock, {type: "mdcCardActions", mdcCardActionsVertical: true}, [
-        m(cardActionButton, "Vertical Action 1"),
-        m(cardActionButton, "Vertical Action 2")
-    ])
-])`
-        ),
-        m(card, {mdcCardThemeDark: true, style: {backgroundColor: "dimgray"}}, [
-            m(cardBlock, {type: "mdcCardMedia", style: {backgroundColor: "green", height: "90px"}},
-                m(cardTitle, "Title in media block")
-            ),
-            m(cardBlock, {type: "mdcCardSupportingText"}, "Supporting text"),
-            m(cardBlock, {type: "mdcCardActions"}, [
-                m(cardActionButton, {mdcButtonThemeDark: true}, "Action 1"),
-                m(cardActionButton, {mdcButtonThemeDark: true}, "Action 2")
-            ])
-        ]),
-        m(code,
-`m(card, {mdcCardThemeDark: true, style: {backgroundColor: "dimgray"}}, [
-    m(cardBlock, {type: "mdcCardMedia", style: {backgroundColor: "green", height: "90px"}},
-        m(cardTitle, "Title in media block")
-    ),
-    m(cardBlock, {type: "mdcCardSupportingText"}, "Supporting text"),
-    m(cardBlock, {type: "mdcCardActions"}, [
-        m(cardActionButton, {mdcButtonThemeDark: true}, "Action 1"),
-        m(cardActionButton, {mdcButtonThemeDark: true}, "Action 2")
-    ])
-])`
-        ),
-        m(card, [
-            m(cardBlock, {type: "mdcCardHorizontalBlock"}, [
-                m(cardBlock, {type: "mdcCardPrimary"}, [
-                    m(cardTitle, "Title"),
-                    m(cardSubtitle, "Subtitle")
+export default {
+    view() {
+        return m("main", [
+            m("h1", "MDC Cards with material-components-mithril"),
+            m("section.example-cards", [
+                m(card, [
+                    m(cardBlock, {type: "media", class: "background_16-9"}),
+                    m(cardBlock, "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.")
                 ]),
-                m("img.mdc-card__media-item[alt=Img]", {style: {width: "90px", height: "90px"}})
-            ]),
-            m(cardBlock, {type: "mdcCardActions"}, [
-                m(cardActionButton, "Action 1"),
-                m(cardActionButton, "Action 2")
+                m(card, [
+                    m(cardBlock, {type: "primary"}, [
+                        m(".avatar"),
+                        m(cardTitle, "Title"),
+                        m(cardSubtitle, "Subhead")
+                    ]),
+                    m(cardBlock, {type: "media", class: "background_16-9"}),
+                    m(cardBlock, "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor."),
+                    m(cardBlock, {type: "actions"}, [
+                        m(cardAction, "Action 1"),
+                        m(cardAction, "Action 2")
+                    ])
+                ]),
+                m(card, [
+                    m(cardBlock, {type: "primary"}, [
+                        m(".avatar"),
+                        m(cardTitle, "Title"),
+                        m(cardSubtitle, "Subhead")
+                    ]),
+                    m(cardBlock, {type: "media", class: "background_16-9"}),
+                    m(cardBlock, {type: "actionsVertical"}, [
+                        m(cardAction, "Action 1"),
+                        m(cardAction, "Action 2")
+                    ])
+                ]),
+                m(card, [
+                    m(cardBlock, {type: "media", class: "background_16-9"}),
+                    m(cardBlock, {type: "primary"}, [
+                        m(cardTitle, {large: true}, "Title goes here"),
+                        m(cardSubtitle, "Subtitle here")
+                    ]),
+                    m(cardBlock, {type: "actions"}, [
+                        m(cardAction, "Action 1"),
+                        m(cardAction, "Action 2")
+                    ])
+                ]),
+                m(card, [
+                    m(cardBlock, {type: "primary"}, [
+                        m(cardTitle, {large: true}, "Title goes here"),
+                        m(cardSubtitle, "Subtitle here")
+                    ]),
+                    m(cardBlock, "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."),
+                    m(cardBlock, {type: "actions"}, [
+                        m(cardAction, "Action 1"),
+                        m(cardAction, "Action 2")
+                    ])
+                ]),
+                m(card, {theme: "dark", class: "background1-1"}, [
+                    m(cardBlock, {type: "primary"}, [
+                        m(cardTitle, {large: true}, "Title goes here"),
+                        m(cardSubtitle, "Subtitle here")
+                    ]),
+                    m(cardBlock, {type: "actions"}, [
+                        m(cardAction, {theme: "dark"}, "Action 1"),
+                        m(cardAction, {theme: "dark"}, "Action 2")
+                    ])
+                ]),
+                m(card, {class: "small"}, [
+                    m(cardBlock, {type: "media", class: "background1-1"},
+                        m(cardTitle, {large: true}, "Title")
+                    ),
+                    m(cardBlock, {type: "actions"},
+                        m(cardAction, "Action 1")
+                    )
+                ]),
+                m(card, [
+                    m(cardBlock, {type: "horizontalBlock"}, [
+                        m(cardBlock, {type: "primary"}, [
+                            m(cardTitle, {large: true}, "Title here"),
+                            m(cardSubtitle, "Subtitle here")
+                        ]),
+                        m(cardMediaItem, {src: "images/1-1.jpg"})
+                    ]),
+                    m(cardBlock, {type: "actions"}, [
+                        m(cardAction, "Action 1"),
+                        m(cardAction, "Action 2")
+                    ])
+                ]),
+                m(card, [
+                    m(cardBlock, {type: "horizontalBlock"}, [
+                        m(cardBlock, {type: "primary"}, [
+                            m(cardTitle, {large: true}, "Title here"),
+                            m(cardSubtitle, "Subtitle here")
+                        ]),
+                        m(cardMediaItem, {size: 1.5, src: "images/1-1.jpg"})
+                    ]),
+                    m(cardBlock, {type: "actions"}, [
+                        m(cardAction, "Action 1"),
+                        m(cardAction, "Action 2")
+                    ])
+                ]),
+                m(card, [
+                    m(cardBlock, {type: "horizontalBlock"}, [
+                        m(cardBlock, {type: "primary"}, [
+                            m(cardTitle, {large: true}, "Title here"),
+                            m(cardSubtitle, "Subtitle here")
+                        ]),
+                        m(cardMediaItem, {size: 2, src: "images/1-1.jpg"})
+                    ]),
+                    m(cardBlock, {type: "actions"}, [
+                        m(cardAction, "Action 1"),
+                        m(cardAction, "Action 2")
+                    ])
+                ]),
+                m(card, [
+                    m(cardBlock, {type: "horizontalBlock"}, [
+                        m(cardMediaItem, {size: 3.1, src: "images/1-1.jpg"}),
+                        m(cardBlock, {type: "actionsVertical"}, [
+                            m(cardAction, "A1"),
+                            m(cardAction, "A2")
+                        ])
+                    ])
+                ])
             ])
-        ]),
-        m(code,
-`m(card, [
-    m(cardBlock, {type: "mdcCardHorizontalBlock"}, [
-        m(cardBlock, {type: "mdcCardPrimary"}, [
-            m(cardTitle, "Title"),
-            m(cardSubtitle, "Subtitle")
-        ]),
-        m("img.mdc-card__media-item[alt=Img]", {style: {width: "90px", height: "90px"}})
-    ]),
-    m(cardBlock, {type: "mdcCardActions"}, [
-        m(cardActionButton, "Action 1"),
-        m(cardActionButton, "Action 2")
-    ])
-])`
-        )
-    ]
-});
+        ]);
+    }
+};

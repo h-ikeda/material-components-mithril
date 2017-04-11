@@ -1,10 +1,9 @@
-import f from "./commons/vnode";
+import c from "./commons/component-with-default";
 
-export default {
-    view: vnode => f(vnode, "", {
-        mdcCard: "mdc-card",
-        mdcCardThemeDark: "mdc-card--theme-dark"
-    }, cls =>
-        cls === "mdcCard" || vnode.attrs[cls]
-    )
-};
+export default c({
+    class: "mdc-card"
+}, {
+    theme(v) {
+        this.class += v === "dark" ? " mdc-card--theme-dark": "";
+    }
+});

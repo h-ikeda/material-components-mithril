@@ -1,22 +1,26 @@
+/*eslint-env browser */
+
 import m from "mithril";
 import buttons from "./example-buttons";
+import cards from "./example-cards";
+import checkboxes from "./example-checkboxes";
+import lists from "./example-lists";
+import toolbars from "./example-toolbars";
 
-var field = {
-    view(vnode) {
-        return m("fieldset", [
-            m("legend", vnode.attrs.group),
-            vnode.children
-        ]);
-    }
+var exComps = {
+    Button: buttons,
+    Card: cards,
+    Checkbox: checkboxes,
+    List: lists,
+    Toolbar: toolbars
 };
 
-var exComp = {
+var main = {
     view() {
-        return [
-            m("h1", "material-components-mithril: Examples"),
-            m(field, {group: "Button"}, m(buttons))
-        ];
+        return m("main", m("nav", m("ul", Object.keys(exComps).map(k =>
+            m("li", m("a", {oncreate: m.route.link, href: k}, k))
+        ))));
     }
 };
 
-m.mount(document.body, exComp);
+m.route(document.body, "index", Object.assign({"index": main}, exComps));

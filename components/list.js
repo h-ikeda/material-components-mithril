@@ -1,13 +1,16 @@
-import f from "./commons/vnode";
+import c from "./commons/component-with-default";
 
-export default {
-    view: vnode => f(vnode, "ul", {
-        mdcList: "mdc-list",
-        mdcListDense: "mdc-list--dense",
-        mdcListAvatarList: "mdc-list--avatar-list",
-        mdcListTwoLine: "mdc-list--two-line",
-        mdcListThemeDark: "mdc-list--theme-dark"
-    }, cls =>
-        (cls === "mdcList") || vnode.attrs[cls]
-    )
-};
+export default c({
+    tagName: "ul",
+    class: "mdc-list"
+}, {
+    dense(v) {
+        this.class += v ? " mdc-list--dense": "";
+    },
+    twoLine(v) {
+        this.class += v ? " mdc-list--two-line": "";
+    },
+    avater(v) {
+        this.class += v ? " mdc-list--avatar-list": "";
+    }
+});

@@ -1,0 +1,71 @@
+/* Buttons */
+fieldset .mdc-button {
+    margin: 16px;
+}
+
+fieldset {
+    margin-bottom: 0.5rem;
+}
+
+.mdc-theme--dark fieldset {
+    background-color: #333;
+}
+
+legend {
+    background: white;
+}
+
+/* Cards */
+.example-cards .mdc-card {
+    max-width: 21.875rem;
+    margin-bottom: 48px;
+}
+
+.example-cards .background_16-9 {
+    background-image: url(images/16-9.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 12.313rem;
+}
+
+.example-cards .avatar {
+    position: absolute;
+    background: #bdbdbd;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+}
+
+.example-cards .avatar~.mdc-card__title, .example-cards .avatar~.mdc-card__subtitle {
+    margin-left: 56px;
+}
+
+.example-cards .background1-1 {
+    background-image: url(images/1-1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 21.875rem;
+}
+
+.example-cards .mdc-card--theme-dark .mdc-card__primary, .example-cards .mdc-card--theme-dark .mdc-card__actions {
+    background-color: rgba(0, 0, 0, .4);
+}
+
+.example-cards .small {
+    max-width: 10.938rem;
+}
+
+.example-cards .small .mdc-card__media {
+    height: 10.938rem;
+}
+
+/* Checkboxes */
+.example-checkbox {
+    margin-top: .5rem;
+    padding: 0 .5rem 1rem .5rem;
+}
+
+.example-checkbox.mdc-theme--dark {
+    background: #262626;
+    color: white;
+}

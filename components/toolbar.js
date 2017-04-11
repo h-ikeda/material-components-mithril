@@ -1,10 +1,10 @@
-import f from "./commons/vnode";
+import c from "./commons/component-with-default";
 
-export default {
-    view: vnode => f(vnode, "header", {
-        mdcToolbar: "mdc-toolbar",
-        mdcToolbarFixed: "mdc-toolbar--fixed"
-    }, cls =>
-        (cls === "mdcToolbar") || vnode.attrs[cls]
-    )
-};
+export default c({
+    tagName: "header",
+    class: "mdc-toolbar"
+}, {
+    fixed(v) {
+        this.class += v ? " mdc-toolbar--fixed": "";
+    }
+});
