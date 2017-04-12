@@ -3,10 +3,10 @@ import {MDCDialog} from "@material/dialog";
 import button from "./button";
 
 function changeState(vnode) {
-    if (vnode.dom.MDCDialog.open && !vnode.attrs.open) {
-        vnode.dom.MDCDialog.close();
-    } else if (!vnode.dom.MDCDialog.open && vnode.attrs.open) {
+    if (vnode.attrs.open) {
         vnode.dom.MDCDialog.show();
+    } else {
+        vnode.dom.MDCDialog.close();
     }
     if (typeof vnode.attrs.onaccept === "function") {
         vnode.dom.MDCDialog.listen("MDCDialog:accept", vnode.attrs.onaccept);
