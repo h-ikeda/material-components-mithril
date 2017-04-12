@@ -9,6 +9,7 @@ import cardTitle from "./components/card-title";
 import cardSubtitle from "./components/card-subtitle";
 import cardMediaItem from "./components/card-media-item";
 import checkbox from "./components/checkbox";
+import dialog from "./components/dialog";
 import formField from "./components/form-field";
 import list from "./components/list";
 import listItem from "./components/list-item";
@@ -29,6 +30,7 @@ export {
     cardTitle,
     cardSubtitle,
     checkbox,
+    dialog,
     formField,
     list,
     listItem,

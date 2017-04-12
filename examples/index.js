@@ -4,6 +4,7 @@ import m from "mithril";
 import buttons from "./example-buttons";
 import cards from "./example-cards";
 import checkboxes from "./example-checkboxes";
+import dialog from "./example-dialog";
 import lists from "./example-lists";
 import toolbars from "./example-toolbars";
 
@@ -11,6 +12,7 @@ var exComps = {
     Button: buttons,
     Card: cards,
     Checkbox: checkboxes,
+    Dialog: dialog,
     List: lists,
     Toolbar: toolbars
 };
