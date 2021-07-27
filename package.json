@@ -31,7 +31,7 @@
   },
   "devDependencies": {
     "@material/checkbox": "^4.0.0",
-    "@material/dialog": "^3.1.0",
+    "@material/dialog": "^12.0.0",
     "@material/ripple": "^3.1.0",
     "babel-core": "^6.24.0",
     "babel-loader": "^7.1.5",
