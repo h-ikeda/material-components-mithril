@@ -40,6 +40,6 @@
     "mithril": "^2.0.4",
     "mocha": "^7.0.0",
     "mocha-phantomjs": "^4.1.0",
-    "webpack": "^2.3.2"
+    "webpack": "^5.72.0"
   }
 }
